@@ -1,73 +1,380 @@
+
 /* Ini file CSS */
 
+/* Style untuk tag body */
 body {
-    font-family: monospace;
+    font-family: Nunito;  /* Menggunakan font Nunito */
+    background-color: #C9B6E4;
 }
 
+/* Style untuk tag main */
 main {
-    max-width: 750px;
+    max-width: 700px;
     justify-self: center;
+    margin: 0 25px;
 
     /* Background Matter */
-    background-color: antiquewhite;
+    background-color: #F1F1F6;
     border-radius: 8px;
+    padding: 15px;
+    box-shadow: 14px 12px 6px 4px rgba(0, 0, 0, 0.1);  /* memberikan bayangan pada item html */
 }
 
+/* Style untuk class header */
 .main-header {
     text-align: center;
+    padding-top: 18px;
 }
 
+/* Style untuk tag section */
 section {
-    padding: 8px;
+    padding: 8px 43px;
+    text-align: justify;
 }
 
+/* Style untuk class input-group */
 .input-group {
     display: flex;
     flex-direction: column;
+    font-weight: bold;
 }
 
+/* Style untuk tag input */
 input {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: 3px solid #ccc;
+    border: 2px solid #ccc;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     outline: none;
+    border-radius: 10px;  /* memberikan radius pada item html */
+    font-family: Nunito;  /* Menggunakan font Nunito */
+    box-shadow: 5px 4px 4px 2px rgba(0, 0, 0, 0.1);  /* memberikan bayangan pada item html */
 }
 
+/* Style untuk tag input number ketika di-focus */
 input[type=number]:focus {
     border: 3px solid #555;
 }
 
-.button-group {
-    margin-top: 16px;
+/* Style font placeholder untuk tag input */
+input[type=number], input[type=text]::placeholder {
+    font-family: Nunito;
 }
 
+/* Style untuk class button-group */
+.button-group {
+    margin-top: 8px;
+    text-align: center;  /* memberikan posisi teks ke tengah */
+}
+
+/* Style untuk tag button */
 button {
     border: none;
-    padding: 8px;
-    border-radius: 4px;
+    padding: 10px 16px;
+    border-radius: 6px;  /* memberikan radius pada item html */
+    cursor: pointer;    /* memberikan efek cursor ketika dihover */
+    margin: 4px;
+    color: white;
+    font-family: Nunito;  /* Menggunakan font Nunito */
+    font-weight: bold;  /* memberikan ketebalan pada font */
+    box-shadow: 5px 5px 4px 3px rgba(0, 0, 0, 0.1);  /* memberikan bayangan pada item html */
 }
 
-.bg-aquamarine {
-    background-color: aquamarine;
+/* Style warna untuk class button-submit */
+.btn-submit {
+    background-color: cornflowerblue;
 }
 
-.bg-gray {
-    background-color: lightgray;
+/* Style warna untuk class button-submit ketika dihover */
+.btn-submit:hover {
+    background-color: #5780cb;
 }
 
-.bg-green {
-    background-color: lightgreen;
+/* Style warna untuk class button-reverse */
+.btn-reverse {
+    background-color: chocolate;
 }
 
-.remark {
+/* Style warna untuk class button-reverse ketika dihover */
+.btn-reverse:hover {
+    background-color: #b45b1c;
+}
+
+/* Style warna untuk class button-reset */
+.btn-reset {
+    background-color: darkorange;
+    margin: 0px 10px;
+}
+
+/* Style warna untuk class button-reset ketika dihover */
+.btn-reset:hover {
+    background-color: #db7800;
+}
+
+/* Style untuk id rumus-header */
+#rumus-header {
+    padding-top: 10px;
+}
+
+/* Style untuk class remark & remark-s */
+.remark, .remark-s {
     font-weight: bold;
-    font-size: x-large;
+    font-size: large;
 }
 
+/* Style untuk class remark-s */
+.remark-s {
+    font-style: italic;
+}
+
+/* Style untuk tag footer */
 footer {
     text-align: center;
+    font-family: monospace;
+    font-size: 14px;
+    padding: 30px 2px;
 }
+
+/* Style untuk class thermometer */
+.thermometer {
+    z-index: 9999;
+    position: fixed;
+    bottom: 5%;
+    right: 1%;
+    width: 120px;
+    height: 120px;
+    transition: transform 0.5s;
+}
+
+/* Style untuk class thermometer ketika dihover */
+.thermometer:hover {
+    transform: scale(1.1);
+}
+
+
+/* Style untuk menyesuaikan isi konten web dengan ukuran layar user */
+/* Untuk ukuran layar 700px ke bawah */
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 90%;
+    }
+
+    main {
+        padding: 15px;
+        margin: 0 20px;
+    }
+
+    section {
+        padding: 8px 20px;
+    }
+
+    .thermometer {
+        width: 100px;
+        height: 100px;
+    }
+
+    .input-group {
+        font-size: 90%;
+    }
+
+    input {
+        font-size: 90%;
+        padding: 10px 18px;
+    }
+
+    button {
+        font-size: 90%;
+        padding: 8px 14px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Untuk ukuran layar 500px ke bawah */
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 80%;
+    }
+
+    main {
+        padding: 15px;
+        margin: 0 20px;
+    }
+
+    section {
+        padding: 8px 10px;
+    }
+
+    .remark, .remark-s {
+        font-size: larger;
+    }
+
+    .thermometer {
+        width: 90px;
+        height: 90px;
+    }
+
+    .input-group {
+        font-size: 90%;
+    }
+
+    input {
+        font-size: 90%;
+        padding: 10px 16px;
+    }
+
+    button {
+        font-size: 90%;
+        padding: 6px 12px;
+    }
+    
+    footer {
+        font-size: 13px;
+    }
+
+}
+
+/* Untuk ukuran layar 400px ke bawah */
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 70%;
+    }
+
+    main {
+        padding: 15px;
+        margin: 0 20px;
+    }
+
+    section {
+        padding: 8px 5px;
+    }
+
+    .remark, .remark-s {
+        font-size: larger;
+    }
+    
+    .thermometer {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .input-group {
+        font-size: 90%;
+    }
+
+    input {
+        font-size: 90%;
+        padding: 8px 14px;
+    }
+
+    button {
+        font-size: 90%;
+        padding: 6px 12px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
+
+/* Untuk ukuran layar 312px ke bawah */
+@media screen and (max-width: 312px) {
+    html {
+        font-size: 70%;
+    }
+
+    main {
+        padding: 15px;
+        margin: 0 20px;
+    }
+
+    section {
+        padding: 8px 5px;
+    }
+
+    .remark, .remark-s {
+        font-size: larger;
+    }
+
+    .thermometer {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .btn-reset {
+        margin: 8px 35%;
+    }
+
+    .input-group {
+        font-size: 90%;
+    }
+
+    input {
+        font-size: 90%;
+        padding: 8px 14px;
+    }
+
+    button {
+        font-size: 90%;
+        padding: 6px 12px;
+    }
+
+    footer {
+        font-size: 11px;
+    }
+}
+
+/* Untuk ukuran layar 200px ke bawah */
+@media screen and (max-width: 200px) {
+    html {
+        font-size: 60%;
+    }
+
+    main {
+        padding: 15px;
+        margin: 0 20px;
+    }
+
+    section {
+        padding: 8px 5px;
+    }
+
+    .remark, .remark-s {
+        font-size: larger;
+    }
+
+    .thermometer {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .btn-reset {
+        margin: 8px 20%;
+    }
+
+    .input-group {
+        font-size: 90%;
+    }
+
+    input {
+        font-size: 90%;
+        padding: 8px 14px;
+    }
+
+    button {
+        font-size: 90%;
+        padding: 6px 12px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+    
+}
+
+/* Akhir file CSS */
