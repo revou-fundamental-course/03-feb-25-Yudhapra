@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Tag untuk responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Konversi Suhu</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <h1>Konversi Suhu</h1>
+    </header>
+
+    <main>
+        <!-- Introduction -->
+        <section>
+            <p>Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah,
+                lalu klik tombol konversi untuk mendapatkan hasil konversi
+                dalam bentuk Fahrenheit (&deg;F)</p>
+        </section>
+
+        <!-- Form Input Suhu Yang Ingin Di Konversi -->
+        <section>
+            <form>
+                <div class="input-group">
+                    <label for="main-input">Celcius:</label>
+                    <input type="number" id="main-input">
+                </div>
+
+                <div class="button-group">
+                    <button class="bg-aquamarine">Konversi</button>
+                    <button class="bg-green">Reset</button>
+                    <button class="bg-gray">Reverse</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Hasil Konversi -->
+        <section>
+            <div class="input-group">
+                <label for="main-result">Fahrenheit:</label>
+                <input type="text" id="main-result" readonly>
+            </div>
+        </section>
+
+        <!-- Cara Konversi Suhu -->
+        <section>
+            <div class="input-group">
+                <label for="cara-konversi">Cara Konversi:</label>
+                <input type="text" id="cara-konversi" readonly>
+            </div>
+        </section>
+
+        <!-- Penjelasan Rumus Konversi Suhu -->
+        <section>
+            <header>
+                <h3>Cara Konversi Dari Celcius (&deg;C) ke Fahrenheit (&deg;F)</h3>
+            </header>
+
+            <hr>
+
+            <article>
+                <p>Suhu <span class="remark">S</span></p>
+                <p>S<sub>(&deg;F)</sub>=</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with 💖 by Yudhapra</p>
+    </footer>
+</body>
+
+</html>
