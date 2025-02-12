@@ -57,10 +57,10 @@ Anda dapat menjalankan proyek ini dengan mudah di file lokal Anda. Ikuti langkah
    - Buka file *index.html* di browser favorit Anda (Chrome, Firefox, dll.).
    - Anda juga bisa menggunakan Live Server di VS Code untuk menjalankannya.
 4. **Cara Penggunaan**:
-   - Masukkan angka suhu di input "Masukkan nilai suhu"
-   - Klik "Konversi" maka hasil konversi suhu akan langsung muncul
-   - Klik "Reverse" untuk mengganti jenis suhu yang akan dikonversi
-   - Klik "Reset" untuk mengosongkan form input
+   - Masukkan angka suhu pada input *Masukkan nilai suhu*
+   - Klik **Konversi** maka hasil konversi suhu akan langsung muncul
+   - Klik **Reverse** untuk mengganti jenis suhu yang akan dikonversi
+   - Klik **Reset** untuk mengosongkan form input
 
 **Atau dapat coba gunakan langsung pada web live demo berikut: [Web Konversi Suhu](https://revou-fundamental-course.github.io/03-feb-25-Yudhapra/)**
 
