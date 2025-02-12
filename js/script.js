@@ -61,15 +61,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fungsi Event listener untuk tombol "Reverse"
     reverseButton.addEventListener('click', function () {
       
+      // Ambil nilai input dan hasil konversi untuk ditukar
+      const currentInput = mainInput.value;
+      const currentResult = mainResult.value;
+      
+      // Tukar nilai input dan hasil konversi
+      mainInput.value = currentResult;
+      mainResult.value = currentInput;
+      
         // Toggle mode konversi
       if (modeKonversi === "CtoF") {
         // Ganti mode konversi Fahrenheit ke Celcius
         modeKonversi = "FtoC";
         
-        // Ganti label input
+        // Ganti label input & result
         labelInput.textContent = "Fahrenheit (℉):";
         labelResult.textContent = "Celcius (℃):";
-        
+
+        // Tampilkan cara kalkulasi konversi suhu Fahrenheit ke Celcius versi reverse
+        caraKonversi.value = `(${currentResult}℉ - 32) ÷ (9/5) = ${currentInput}℃`;
+
         // Ganti teks intro dan rumus konversi
         intro.innerHTML = "Masukkan suhu derajat Fahrenheit (&deg;F) ke kotak dibawah, lalu klik tombol konversi untuk mendapatkan hasil konversi dalam bentuk Celcius (&deg;C)";
         rumusHeader.innerHTML = "<h3>Cara konversi dari Fahrenheit (℉) ke Celcius (℃)</h3>";
@@ -82,17 +93,16 @@ document.addEventListener('DOMContentLoaded', () => {
         // Kembalikan label ke kondisi awal
         labelInput.textContent = "Celcius (℃):";
         labelResult.textContent = "Fahrenheit (℉):";
-        
+
+        // Tampilkan cara kalkulasi konversi suhu Celcius ke Fahrenheit versi reverse
+        caraKonversi.value = `( ${currentResult}℃ × (9/5) ) + 32 = ${currentInput}℉`;
+
         // Kembalikan teks intro dan rumus konversi ke kondisi awal
         intro.innerHTML = "Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah, lalu klik tombol konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F)";
         rumusHeader.innerHTML = "<h3>Cara konversi dari Celcius (℃) ke Fahrenheit (℉)</h3>";
         rumus.innerHTML = "<p>Suhu <span class=\"remark\" style=\"font-style: italic;\">S</span> dalam derajat Fahrenheit (℉) sama dengan suhu <span class=\"remark\" style=\"font-style: italic;\">S</span> dalam derajat Celcius (℃) kali <span class=\"remark\">9/5</span> tambah <span class=\"remark\">32</span>.</p><p><i>S</i><sub>(℉)</sub>= (<i>S</i><sub>(℃)</sub> × 9/5) + 32</p><p>atau</p><p><i>S</i><sub>(℉)</sub> = (<i>S</i><sub>(℃)</sub> × 1.8) + 32</p>";
       }
       
-      // Bersihkan input, hasil dan cara konversi saat mengganti mode
-      mainInput.value = "";
-      mainResult.value = "";
-      caraKonversi.value = "";
     });
   
     // Fungsi Event listener untuk tombol reset (form reset)
